@@ -1,0 +1,45 @@
+{ gtk3 }: gtk3.overrideAttrs (old: {
+  patches = (old.patches or []) ++ [
+    ./patches/updateiconcache-Sort-list-of-entries.patch
+    ./patches/gdk-Don-t-distribute-generated-files-in-tarballs.patch
+    ./patches/gtk-Really-don-t-distribute-built-files.patch
+    ./patches/demos-examples-tests-Don-t-distribute-built-files.patch
+    ./patches/016_no_offscreen_widgets_grabbing.patch
+    ./patches/017_no_offscreen_device_grabbing.patch
+    ./patches/060_ignore-random-icons.patch
+    ./patches/reftest-known-fail.patch
+    ./patches/Disable-accessibility-dump-aka-a11ytests-test.patch
+    ./patches/librem5-Drop-reftests.patch
+    ./patches/Drop-prebuilt-files-in-gtk.patch
+    ./patches/Add-GtkHdyViewSwitcherButton.patch
+    ./patches/Add-GtkHdyViewSwitcher.patch
+    ./patches/Add-GtkHdyViewSwitcherBar.patch
+    ./patches/Add-GtkHdyAnimation.patch
+    ./patches/Add-GtkHdySqueezer.patch
+    ./patches/Add-GtkHdyViewSwitcherTitle.patch
+    ./patches/Add-GtkHdyShadowHelper.patch
+    ./patches/Add-GtkHdyNavigationDirection.patch
+    ./patches/Add-GtkHdySwipeable-and-GtkHdySwipeTracker.patch
+    ./patches/Add-GtkHdyClamp.patch
+    ./patches/Add-GtkHdyFlap.patch
+    ./patches/theme-Add-libhandy-styles.patch
+    ./patches/Add-padding-for-HdyViewSwitcherTitle.patch
+    ./patches/Add-org.gtk.Settings.Purism.patch
+    ./patches/gtkprivate-Add-an-API-to-check-if-phone.patch
+    ./patches/aboutdialog-Port-to-phones.patch
+    ./patches/Add-the-view-sidebar-symbolic-icon.patch
+    ./patches/Port-file-chooser-to-phones.patch
+    ./patches/hdy-flap-Use-natural-size-for-folding-instead-of-minimum.patch
+    ./patches/messagedialog-Set-orientation-based-on-device.patch
+    ./patches/scrolledwindow-Set-deceleration-value-based-on-the-device.patch
+    ./patches/dialog-Maximize-resizable-dialogs-on-phones.patch
+    ./patches/window-Maximize-resizable-pseudo-dialogs-on-mobile.patch
+    ./patches/headerbar-Use-a-back-button-in-dialogs-on-mobile.patch
+    ./patches/infobar-Move-the-action-area-below-on-the-phone.patch
+    ./patches/Reduce-the-font-chooser-minimum-size.patch
+    ./patches/printunixdialog-Adapt-for-phones.patch
+    ./patches/window-Disable-window-dragging-on-phones.patch
+    ./patches/events-Compress-touch-update-events.patch
+    ./patches/librem5-Make-GtkShortcutsWindow-adaptive.patch
+  ];
+})
