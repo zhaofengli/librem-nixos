@@ -6,7 +6,6 @@ This Nixpkgs overlay contains patched versions of packages used for the Librem 5
 
 This overlay does not override any packages directly, but rather place the patched versions under `pkgs.librem`:
 
-- `upower`
 - `gtk3`
 
 ## Recommended Configurations
@@ -15,7 +14,6 @@ This overlay does not override any packages directly, but rather place the patch
 {
   powerManagement.enable = true;
   services.upower.enable = true;
-  services.upower.package = pkgs.librem.upower;
 
   system.replaceRuntimeDependencies = [
     {

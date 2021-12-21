@@ -1,6 +1,6 @@
-self: super:
+final: prev:
 {
   librem = {
-    gtk3 = super.callPackage ./pkgs/gtk3 {};
+    gtk3 = final.callPackage ./pkgs/gtk3 {};
   };
 }
